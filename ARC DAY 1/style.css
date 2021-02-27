@@ -1,0 +1,170 @@
+:root {
+    --input-height: 50px;
+    --icon-padding: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+nav {
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    font-size: small;
+}
+
+nav > * {
+    margin: 5px;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav img{
+    height: 5vh;
+    width: 5vh;
+    background-color: #333;
+    border-radius: 50%;
+}
+form {
+    width: 47.5vw;
+}
+
+.main-logo {
+    width: 100%;
+    padding: 0 20% 5vh;
+}
+
+.search-input input {
+    width: 100%;
+    height: var(--input-height);
+    border-radius: calc(var(--input-height) / 2);
+    padding: 0 var(--input-height);
+    border: 1px solid #dfe1e5;
+    font-size: 16px;
+}
+
+.search-input input:focus, 
+.search-input input:hover {
+    outline: none;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.search-input {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 25%;
+    opacity: 0.35;
+}
+
+.mic-icon {
+    right: var(--icon-padding);
+}
+
+.search-icon {
+    left: var(--icon-padding);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button {
+    color: #3c4043;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border: none;
+    margin: 5vh 1vh 0;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.buttons button:hover {
+    border: 1px solid #ddd;
+    cursor : pointer;
+    box-shadow: 0 0.5px 3px rgba(0, 0, 0, 0);
+}
+
+form p {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #006eff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    padding-left: 5%;
+    color: rgb(255, 255, 255);
+}
+
+html {
+    height:100%;
+}
+  
+body {
+    margin:0;
+}
+  
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(255, 0, 255) 50%, rgb(0, 255, 255) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:0.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+  
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+  
+.bg3 {
+    animation-duration:5s;
+}
+  
+@keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+}
